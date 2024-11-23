@@ -1,0 +1,73 @@
+Start testing: Nov 23 12:50 +03
+----------------------------------------------------------
+1/1 Testing: MyTest
+1/1 Test: MyTest
+Command: "/home/glebas/Desktop/ППОИС/lab3/build/my_tests"
+Directory: /home/glebas/Desktop/ППОИС/lab3/build
+"MyTest" start time: Nov 23 12:50 +03
+Output:
+----------------------------------------------------------
+[==========] Running 9 tests from 7 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from TransactionTest
+[ RUN      ] TransactionTest.GetDetails
+[       OK ] TransactionTest.GetDetails (0 ms)
+[----------] 1 test from TransactionTest (0 ms total)
+
+[----------] 2 tests from AccountTest
+[ RUN      ] AccountTest.Deposit
+Deposited to Savings Account: 1000
+[       OK ] AccountTest.Deposit (0 ms)
+[ RUN      ] AccountTest.Withdraw
+Deposited to Savings Account: 1000
+Insufficient funds in Alice's account.
+[       OK ] AccountTest.Withdraw (0 ms)
+[----------] 2 tests from AccountTest (0 ms total)
+
+[----------] 1 test from CustomerTest
+[ RUN      ] CustomerTest.AddAndFindAccount
+[       OK ] CustomerTest.AddAndFindAccount (0 ms)
+[----------] 1 test from CustomerTest (0 ms total)
+
+[----------] 1 test from BankTest
+[ RUN      ] BankTest.AddAndFindCustomer
+[       OK ] BankTest.AddAndFindCustomer (0 ms)
+[----------] 1 test from BankTest (0 ms total)
+
+[----------] 1 test from CardTest
+[ RUN      ] CardTest.Validate
+[       OK ] CardTest.Validate (0 ms)
+[----------] 1 test from CardTest (0 ms total)
+
+[----------] 2 tests from ATMTest
+[ RUN      ] ATMTest.WithdrawCash
+Deposited to Savings Account: 1000
+Withdrew 200 from ATM at Main Street
+[       OK ] ATMTest.WithdrawCash (0 ms)
+[ RUN      ] ATMTest.WithdrawInsufficientCash
+Deposited to Savings Account: 200
+ATM out of cash or insufficient account balance.
+[       OK ] ATMTest.WithdrawInsufficientCash (0 ms)
+[----------] 2 tests from ATMTest (0 ms total)
+
+[----------] 1 test from PaymentTest
+[ RUN      ] PaymentTest.ProcessPayment
+Deposited to Savings Account: 500
+Deposited to Checking Account: 200
+[       OK ] PaymentTest.ProcessPayment (0 ms)
+[----------] 1 test from PaymentTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 7 test suites ran. (0 ms total)
+[  PASSED  ] 9 tests.
+libgcov profiling error:/home/glebas/Desktop/ППОИС/lab3/build/CMakeFiles/my_tests.dir/BankSystem.cpp.gcda:overwriting an existing profile data with a different timestamp
+libgcov profiling error:/home/glebas/Desktop/ППОИС/lab3/build/CMakeFiles/my_tests.dir/BankSystemTest.cpp.gcda:overwriting an existing profile data with a different timestamp
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MyTest" end time: Nov 23 12:50 +03
+"MyTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 23 12:50 +03
