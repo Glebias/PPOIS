@@ -1,1 +1,0 @@
-/usr/bin/c++  --coverage CMakeFiles/my_tests.dir/BankSystemTest.cpp.o CMakeFiles/my_tests.dir/BankSystem.cpp.o -o my_tests  /usr/local/lib/libgtest.a -lpthread 

@@ -1,4 +1,0 @@
-/home/glebas/Desktop/ППОИС/lab3/build/CMakeFiles/my_tests.dir
-/home/glebas/Desktop/ППОИС/lab3/build/CMakeFiles/test.dir
-/home/glebas/Desktop/ППОИС/lab3/build/CMakeFiles/edit_cache.dir
-/home/glebas/Desktop/ППОИС/lab3/build/CMakeFiles/rebuild_cache.dir
