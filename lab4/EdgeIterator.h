@@ -12,38 +12,38 @@ public:
 
 private:
     Graph* graph;
-    size_t u, v;
+    size_t start_vertex, end_vertex;
 
 public:
-    EdgeIterator(Graph* g, size_t start_u, size_t start_v) : graph(g), u(start_u), v(start_v) {
-    while (u < graph->vertex_count() && v < graph->vertex_count() && !graph->has_edge(u, v)) {
-        if (++v >= graph->vertex_count()) {
-            u++;
-            v = u + 1;
+    EdgeIterator(Graph* g, size_t start_u, size_t start_v) : graph(g), start_vertex(start_u), end_vertex(start_v) {
+    while (start_vertex < graph->vertex_count() && end_vertex < graph->vertex_count() && !graph->has_edge(start_vertex, end_vertex)) {
+        if (++end_vertex >= graph->vertex_count()) {
+            start_vertex++;
+            end_vertex = start_vertex + 1;
         }
     }
 }
 
     edge_type operator*() {
-        return edge_type(u, v);
+        return edge_type(start_vertex, end_vertex);
     }
 
     EdgeIterator& operator++(){
     v++;
-    while (u < graph->vertex_count() && v < graph->vertex_count() && !graph->has_edge(u, v)) {
-        if (++v >= graph->vertex_count()) {
-            u++;
-            v = u + 1;
+    while (start_vertex < graph->vertex_count() && end_vertex < graph->vertex_count() && !graph->has_edge(start_vertex, end_vertex)) {
+        if (++end_vertex >= graph->vertex_count()) {
+            start_vertex++;
+            end_vertex = start_vertex + 1;
         }
     }
     return *this;
 }
 
     bool operator!=(const EdgeIterator& other) const{
-    return u != other.u || v != other.v;
+    return start_vertex != other.start_vertex || end_vertex != other.end_vertex;
 }
 
 bool operator==(const EdgeIterator& other) const{
-    return u == other.u || v == other.v;
+    return start_vertex == other.start_vertex || end_vertex == other.end_vertex;
 }
 };
